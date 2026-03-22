@@ -1,0 +1,36 @@
+name: Sync Skills
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .opencode/skills/**
+      - scripts/sync-skills.js
+      - skills-sync.config.json
+      - .github/workflows/skills-sync.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Sync skills from canonical source
+        run: node scripts/sync-skills.js --apply --delete --confirm-delete
+
+      - name: Commit synced skills
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(skills): sync providers from canonical source"
+          file_pattern: ".github/skills/** .agents/skills/** .claude/skills/**"

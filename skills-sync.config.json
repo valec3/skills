@@ -1,0 +1,4 @@
+{
+  "canonicalSource": "opencode",
+  "defaultTargets": ["github", "antigravit", "claude"]
+}

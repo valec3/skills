@@ -1,0 +1,92 @@
+\documentclass[11pt,a4paper]{article}
+
+% ================= CONFIG =================
+\usepackage[margin=1.2cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
+\usepackage{parskip}
+
+% ================= COLORS =================
+\definecolor{primary}{RGB}{30, 64, 175}
+\definecolor{secondary}{RGB}{55, 65, 81}
+
+% ================= SECTION FORMAT =================
+\titleformat{\section}
+  {\color{primary}\large\bfseries}
+  {}
+  {0pt}
+  {}
+  [\color{primary}\titlerule]
+
+\titlespacing*{\section}{0pt}{6pt}{4pt}
+
+% ================= LIST SPACING =================
+\setlist[itemize]{
+  leftmargin=1em,
+  topsep=0pt,
+  itemsep=0pt
+}
+
+% ================= DOCUMENT =================
+\begin{document}
+
+% ================= HEADER =================
+\begin{center}
+    {\Large \textbf{NOMBRE COMPLETO}} \\[-2pt]
+    \textcolor{secondary}{TÍTULO PROFESIONAL} \\[4pt]
+    +51 XXX XXX XXX \ | \
+    \hrefmailto{email@email.com}{email@email.com} \\[-2pt]
+    \href{https://linkedin.com/in/usuario}{linkedin.com/in/usuario} \ | \
+    \href{https://portfolio.vercel.app}{portfolio.vercel.app}
+\end{center}
+
+% ================= SUMMARY =================
+\section*{Perfil Profesional}
+
+Descripción breve de 2-3 oraciones relevantes.
+
+% ================= SKILLS =================
+\section*{Habilidades Técnicas}
+\begin{itemize}
+  \item \textbf{Backend:} Skill 1, Skill 2
+  \item \textbf{Frontend:} Skill 3, Skill 4
+  \item \textbf{Otros:} Skill 5, Skill 6
+\end{itemize}
+
+% ================= EXPERIENCE =================
+\section*{Experiencia}
+
+\noindent\textbf{Empresa 1 – Rol} \hfill\textit{Fecha}
+\begin{itemize}
+  \item Logro clave 1 con \textbf{tecnología}
+  \item Logro clave 2
+\end{itemize}
+
+\noindent\textbf{Empresa 2 – Rol} \hfill\textit{Fecha}
+\begin{itemize}
+  \item Logro clave 1
+  \item Logro clave 2
+\end{itemize}
+
+% ================= EDUCATION =================
+\section*{Educación}
+\noindent\textbf{Universidad} \hfill\textit{Año} \\
+Carrera
+
+% ================= CERTIFICATIONS =================
+\section*{Certificaciones}
+\begin{itemize}
+  \item \textbf{Certificación 1} (Institución)
+  \item \textbf{Certificación 2} (Institución)
+\end{itemize}
+
+% ================= LANGUAGES =================
+\section*{Idiomas}
+\begin{itemize}
+  \item Español (Nativo)
+  \item Inglés (Nivel)
+\end{itemize}
+
+\end{document}

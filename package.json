@@ -1,0 +1,16 @@
+{
+  "name": "work-ia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sync:skills": "node scripts/sync-skills.js",
+    "sync:skills:apply": "node scripts/sync-skills.js --apply",
+    "sync:skills:ci": "node scripts/sync-skills.js --apply --delete --confirm-delete"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
