@@ -1,0 +1,181 @@
+PROMPT MAESTRO PARA LOVABLE
+
+OBJETIVO DEL PROYECTO
+Crear una web tipo ecommerce catalogo para Decor Rent Lab, con un diseno hermoso, limpio, elegante y editorial-calido.
+Esta version NO tendra compras online. Debe servir para descubrir productos, filtrar catalogo, ver detalle y solicitar cotizacion por WhatsApp.
+
+RESTRICCIONES CLAVE (OBLIGATORIAS)
+- No carrito.
+- No checkout.
+- No pasarela de pago.
+- No login de cliente.
+- No modulo de ordenes.
+- Si aparece cualquier CTA de compra, reemplazar por: "Cotizar por WhatsApp" o "Consultar disponibilidad".
+
+CONTEXTO DE MARCA
+Marca: Decor Rent Lab.
+Rubro: alquiler de elementos decorativos para eventos.
+Personalidad visual: premium accesible, editorial, limpia, calida, moderna.
+Sensacion buscada: confianza, calidad, detalle artesanal, inspiracion para eventos.
+
+ARQUITECTURA DEL SITIO (MULTI-VISTA)
+Crear como minimo estas vistas:
+1) Home
+2) Catalogo general (todas las categorias)
+3) Pagina de categoria
+4) Pagina de producto
+5) Nosotros / Servicios
+6) Contacto
+
+NAVEGACION Y FLUJO
+- Header fijo con logo, enlaces principales y CTA de WhatsApp.
+- Flujo principal: Home -> Catalogo -> Categoria -> Producto -> Cotizar por WhatsApp.
+- Incluir breadcrumbs en Catalogo/Categoria/Producto.
+- Footer con contacto, redes, zona de servicio y horario.
+
+LISTA DE CATEGORIAS (OBLIGATORIAS)
+Usar estas categorias tal cual y mostrarlas visualmente en Home + Catalogo:
+1) Paneles y Backing
+   Descripcion: basados en "Backing y Paneles" y web de referencia.
+2) Estructuras en Metal
+   Descripcion: arcos, marcos y soportes metalicos.
+3) Cilindros y Mesas
+   Descripcion: plintos para tortas y mesas de apoyo.
+4) Fundas en Tela
+   Descripcion: revestimientos para estructuras y mobiliario.
+5) Numeros y Letras LED
+   Descripcion: incluir linea "Infinity".
+6) Altillo y Complementos
+   Descripcion: accesorios decorativos adicionales y elevadores.
+7) Sillas y Mesas
+   Descripcion: mobiliario principal para invitados y buffet.
+8) Esferas Gigantes
+   Descripcion: categoria "Big Shiny Balls".
+9) Pared de Flores
+   Descripcion: incluir especificamente "Corazon de Flores".
+10) Mariposas LED
+   Descripcion: categoria especial de iluminacion decorativa.
+
+REQUERIMIENTOS DE HOME
+- Hero grande con mensaje emocional y CTA principal: "Ver catalogo".
+- CTA secundario: "Cotizar por WhatsApp".
+- Seccion de categorias destacadas (grid visual con imagen y titulo).
+- Seccion "Como funciona" (3 pasos): Explora -> Elige -> Coordina entrega/retiro.
+- Seccion de productos destacados por temporada/evento.
+- Seccion de confianza: calidad, puntualidad, atencion personalizada.
+- Footer completo.
+
+REQUERIMIENTOS DE CATALOGO Y CATEGORIAS
+- Grid responsive de cards de producto.
+- Filtros visibles (desktop lateral, mobile en drawer):
+  - Categoria
+  - Estilo (elegante, clasico, moderno, romantico)
+  - Color
+  - Uso (cumpleanos, boda, corporativo, baby shower)
+  - Disponibilidad (simulada)
+- Busqueda por texto.
+- Ordenar por: destacados, reciente, nombre.
+- Chips de filtros activos con opcion de limpiar.
+- Estado vacio elegante cuando no hay resultados.
+
+REQUERIMIENTOS DE PAGINA DE PRODUCTO
+- Galeria visual (foto principal + miniaturas).
+- Nombre del producto.
+- Categoria.
+- Descripcion corta y descripcion extendida.
+- Especificaciones: material, medidas, color, recomendaciones.
+- Bloque "Ideal para" con tipos de evento.
+- Productos relacionados.
+- CTA principal fijo/visible: "Cotizar por WhatsApp".
+- CTA secundario: "Consultar disponibilidad".
+
+WHATSAPP Y CONTACTO
+- Boton flotante de WhatsApp en todo el sitio.
+- En cada producto, CTA abre WhatsApp con mensaje prellenado:
+  "Hola Decor Rent Lab, quiero cotizar: [Nombre del producto]."
+- Pagina Contacto con:
+  - Formulario simple (nombre, telefono, tipo de evento, fecha, mensaje)
+  - Aviso: "No se procesa pago online en esta etapa."
+  - Datos de contacto y redes.
+
+DIRECCION VISUAL (HERMOSO + LIMPIO)
+- Estilo editorial calido y elegante.
+- Fondo claro con acentos suaves (no look plano).
+- Mucho espacio en blanco y composicion aireada.
+- Tipografia con contraste entre titulares sofisticados y texto legible.
+- Cards limpias con sombras suaves y bordes sutiles.
+- Imagenes grandes y cuidadas para transmitir valor premium.
+- Iconografia minima y consistente.
+
+PALETA SUGERIDA
+- Base: crema claro / marfil.
+- Texto: carbon suave.
+- Acentos: dorado suave, terracota tenue o verde salvia (usar con moderacion).
+- Mantener alto contraste en textos y botones.
+
+MICROINTERACCIONES Y MOVIMIENTO
+- Aparicion suave de secciones al hacer scroll.
+- Hover elegante en cards y botones (sin exagerar).
+- Transiciones cortas y fluidas.
+- Feedback visual claro en filtros y chips activos.
+
+RESPONSIVE (OBLIGATORIO)
+- Mobile-first.
+- Breakpoints recomendados:
+  - Mobile: <640px
+  - Tablet: 640px-1023px
+  - Desktop: >=1024px
+- En mobile:
+  - Navbar simplificado con menu hamburguesa.
+  - Filtros en drawer.
+  - CTA de WhatsApp siempre visible sin tapar contenido clave.
+
+ACCESIBILIDAD (OBLIGATORIO)
+- Contraste minimo AA.
+- Focus visible en todos los elementos interactivos.
+- Targets tactiles comodos (min 44x44).
+- Labels claros en formulario.
+- Jerarquia semantica correcta (h1-h2-h3, landmarks, alt text).
+
+ESTADOS DE UI (DEFINIR Y MOSTRAR)
+Para botones, campos, filtros y cards incluir estados:
+- default
+- hover
+- active
+- focus
+- disabled
+- loading
+- error
+- empty
+
+MODELO DE DATOS SUGERIDO (MINIMO)
+- Categoria: id, nombre, descripcion, imagenCover
+- Producto: id, nombre, slug, categoriaId, descripcionCorta, descripcionLarga, material, medidas, color, idealPara[], imagenes[], destacado, disponible
+- Config contacto: telefonoWhatsApp, mensajeBaseCotizacion
+
+MICROCOPY SUGERIDO
+- "Ver catalogo"
+- "Explorar categoria"
+- "Cotizar por WhatsApp"
+- "Consultar disponibilidad"
+- "Te ayudamos a elegir la mejor combinacion para tu evento"
+- "Sin compra online por ahora: atencion personalizada por WhatsApp"
+
+ENTREGABLES ESPERADOS DE LOVABLE
+1) Estructura completa de vistas y navegacion.
+2) UI moderna, limpia y coherente con estilo editorial calido.
+3) Catalogo filtrable funcional (sin checkout).
+4) Pagina de producto orientada a cotizacion.
+5) Integracion de CTA y flujo de WhatsApp en puntos clave.
+6) Responsive completo (mobile/tablet/desktop).
+7) Accesibilidad base implementada.
+
+CRITERIOS DE EXITO
+- El sitio se percibe premium, limpio y claro.
+- La navegacion a catalogo es simple y agradable.
+- El usuario entiende rapido que el canal de conversion es WhatsApp.
+- Todas las categorias solicitadas aparecen correctamente.
+- No existe ninguna funcionalidad de compra online.
+
+INSTRUCCION FINAL PARA LOVABLE
+Genera la web completa siguiendo estas reglas de negocio y diseno. Prioriza claridad visual, calidad estetica y conversion a cotizacion por WhatsApp, evitando por completo funcionalidades de ecommerce transaccional (carrito/checkout/pago).

@@ -1,0 +1,134 @@
+Crea una aplicacion web completa para Decor Rent Lab con enfoque ecommerce catalogo (sin compra online), con diseno hermoso, limpio, elegante y editorial-calido.
+
+OBJETIVO
+Construir una web para mostrar categorias y productos de alquiler decorativo, permitiendo filtrar, explorar y cotizar por WhatsApp. Esta version NO debe incluir funcionalidades transaccionales.
+
+REGLAS NO NEGOCIABLES
+- No carrito.
+- No checkout.
+- No pasarela de pago.
+- No login de clientes.
+- No gestion de pedidos.
+- Reemplaza cualquier accion de compra por:
+  - "Cotizar por WhatsApp"
+  - "Consultar disponibilidad"
+
+STACK TECNICO RECOMENDADO
+- Frontend: Next.js 14+ con App Router y TypeScript.
+- Estilos: Tailwind CSS.
+- UI base: componentes reutilizables (botones, cards, chips, drawer, inputs, badges).
+- Datos: mocks locales en JSON/TS (sin backend obligatorio).
+- SEO: metadatos por pagina + etiquetas semanticas.
+
+ARQUITECTURA MINIMA (MULTI-VISTA)
+Implementa estas paginas:
+1. Home
+2. Catalogo general
+3. Categoria (ruta dinamica)
+4. Producto (ruta dinamica)
+5. Nosotros / Servicios
+6. Contacto
+
+NAVEGACION Y FLUJO
+- Header fijo con logo, menu y CTA de WhatsApp.
+- Breadcrumbs en catalogo/categoria/producto.
+- Flujo principal: Home -> Catalogo -> Categoria -> Producto -> Cotizar por WhatsApp.
+- Footer con contacto, redes, zona de servicio y horario.
+
+CATEGORIAS OBLIGATORIAS
+Usa exactamente estas categorias:
+1. Paneles y Backing
+2. Estructuras en Metal
+3. Cilindros y Mesas
+4. Fundas en Tela
+5. Numeros y Letras LED (incluir linea Infinity)
+6. Altillo y Complementos
+7. Sillas y Mesas
+8. Esferas Gigantes (Big Shiny Balls)
+9. Pared de Flores (incluir Corazon de Flores)
+10. Mariposas LED
+
+REQUERIMIENTOS FUNCIONALES
+HOME
+- Hero con CTA principal "Ver catalogo" y secundario "Cotizar por WhatsApp".
+- Grid de categorias destacadas.
+- Seccion "Como funciona" en 3 pasos: Explora, Elige, Coordina.
+- Seccion de destacados y bloque de confianza.
+
+CATALOGO / CATEGORIA
+- Grid responsive de cards de producto.
+- Busqueda por texto.
+- Filtros (desktop lateral, mobile drawer): categoria, estilo, color, uso, disponibilidad.
+- Chips de filtros activos y boton limpiar filtros.
+- Ordenar por: destacados, reciente, nombre.
+- Estado vacio claro y elegante.
+
+PRODUCTO
+- Galeria (imagen principal + miniaturas).
+- Nombre, categoria, descripcion corta/larga.
+- Especificaciones: material, medidas, color, recomendaciones.
+- Bloque "Ideal para".
+- Productos relacionados.
+- CTA principal visible: "Cotizar por WhatsApp".
+
+CONTACTO
+- Formulario: nombre, telefono, tipo de evento, fecha, mensaje.
+- Aviso visible: "No se procesa pago online en esta etapa".
+- Boton flotante de WhatsApp global.
+
+WHATSAPP
+- El boton de cotizacion debe abrir enlace con mensaje prellenado:
+  "Hola Decor Rent Lab, quiero cotizar: [Nombre del producto]"
+
+DIRECCION VISUAL
+- Estilo editorial calido, premium y limpio.
+- Fondo claro con acentos suaves (evitar look plano).
+- Espacio en blanco generoso.
+- Tipografia elegante para titulares y altamente legible para cuerpo.
+- Tarjetas con sombras suaves y bordes sutiles.
+- Animaciones discretas y fluidas (entrada suave y hover elegante).
+
+PALETA SUGERIDA
+- Base: crema/marfil.
+- Texto: carbon suave.
+- Acentos moderados: dorado suave, terracota tenue o verde salvia.
+
+RESPONSIVE Y ACCESIBILIDAD
+- Mobile-first.
+- Breakpoints: mobile <640, tablet 640-1023, desktop >=1024.
+- En mobile: menu hamburguesa, filtros en drawer, CTA WhatsApp visible sin cubrir contenido.
+- Accesibilidad: contraste AA, focus visible, targets tactiles minimos de 44x44, jerarquia semantica correcta, labels claros.
+
+ESTADOS DE UI
+Implementa estados para componentes interactivos:
+- default
+- hover
+- active
+- focus
+- disabled
+- loading
+- error
+- empty
+
+MODELO DE DATOS MINIMO
+- Categoria: id, nombre, slug, descripcion, imagenCover
+- Producto: id, nombre, slug, categoriaSlug, descripcionCorta, descripcionLarga, material, medidas, color, idealPara[], imagenes[], destacado, disponible
+- Contacto: telefonoWhatsApp, mensajeBaseCotizacion
+
+ENTREGABLES ESPERADOS
+1. Estructura de proyecto completa.
+2. Todas las paginas funcionando con rutas.
+3. Componentes reutilizables para UI.
+4. Catalogo filtrable y buscable.
+5. Flujo de cotizacion por WhatsApp integrado.
+6. Responsive completo.
+7. Buenas practicas de accesibilidad y SEO.
+
+FORMATO DE RESPUESTA QUE QUIERO DE TI
+- Primero: resumen corto de arquitectura.
+- Luego: arbol de carpetas.
+- Luego: codigo completo por archivos clave.
+- Finalmente: pasos para ejecutar localmente.
+
+INSTRUCCION FINAL
+Genera codigo de calidad de produccion para este alcance, priorizando claridad visual, mantenibilidad y conversion por WhatsApp. Evita por completo cualquier funcionalidad de ecommerce transaccional (carrito, checkout, pago).
