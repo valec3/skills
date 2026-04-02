@@ -57,16 +57,17 @@ TITLE: <feature>
 PROBLEM STATEMENT:
 SUCCESS METRICS:
 IN SCOPE:
+
 - ...
-OUT OF SCOPE:
+  OUT OF SCOPE:
 - ...
-PERSONAS / ACTORS:
+  PERSONAS / ACTORS:
 - ...
-REQUIREMENTS:
+  REQUIREMENTS:
 - REQ-001: ...
-EDGE CASES:
+  EDGE CASES:
 - ...
-RISKS:
+  RISKS:
 - ...
 
 Use this minimum structure for `technical-spec.txt`:
@@ -78,6 +79,7 @@ STATE MANAGEMENT:
 ERROR HANDLING:
 OBSERVABILITY:
 TRADE-OFFS:
+
 - Decision: ...
   Alternatives: ...
   Why: ...
@@ -85,23 +87,26 @@ TRADE-OFFS:
 Use this minimum structure for `implementation-plan.txt`:
 
 MILESTONES:
+
 1. ...
 2. ...
 3. ...
-TASK BREAKDOWN:
+   TASK BREAKDOWN:
+
 - TASK-001: ...
-DEPENDENCIES:
+  DEPENDENCIES:
 - ...
-ROLLBACK PLAN:
+  ROLLBACK PLAN:
 - ...
 
 Use this minimum structure for `acceptance-tests.txt`:
 
 ACCEPTANCE CRITERIA:
+
 - AC-001 linked to REQ-001
-TEST CASES:
+  TEST CASES:
 - Given / When / Then
-NON-FUNCTIONAL CHECKS:
+  NON-FUNCTIONAL CHECKS:
 - Performance
 - Accessibility
 - Security
